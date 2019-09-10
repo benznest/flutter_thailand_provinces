@@ -1,12 +1,14 @@
 import 'package:flutter_thailand_provinces/dao/amphure_dao.dart';
 import 'package:flutter_thailand_provinces/dao/province_dao.dart';
 import 'package:flutter_thailand_provinces/flutter_thailand_provinces.dart';
+import 'package:flutter_thailand_provinces/provider/address_provider.dart';
 import 'package:sqflite/sqflite.dart';
 
 class ProvinceProvider {
   static const String TABLE_PROVINCES = "provinces";
 
   static Future<List<ProvinceDao>> all() async {
+
     List<Map<String, dynamic>> mapResult = await ThailandProvincesDatabase.db.query(TABLE_PROVINCES);
 
     List<ProvinceDao> listProvinces = mapProvinceList(mapResult);

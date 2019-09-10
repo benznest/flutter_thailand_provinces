@@ -4,10 +4,12 @@ import 'package:flutter_thailand_provinces/flutter_thailand_provinces.dart';
 import 'package:flutter_thailand_provinces_example/screens/amphures_list_screen.dart';
 import 'package:flutter_thailand_provinces_example/screens/home_screen.dart';
 import 'package:flutter_thailand_provinces_example/screens/provinces_list_screen.dart';
+import 'package:flutter_thailand_provinces/provider/address_provider.dart';
 
 Future main() async {
-
+  WidgetsFlutterBinding.ensureInitialized();
   await ThailandProvincesDatabase.init();
+  await AddressProvider.search(keyword: "Mae");
   runApp(MyApp());
 }
 
@@ -24,8 +26,6 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: HomeScreen()
-    );
+    return MaterialApp(home: HomeScreen());
   }
 }
