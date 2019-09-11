@@ -143,17 +143,44 @@ for(AddressDao address in list){
 
 ข้อมูล address เฉพาะในจังหวัด
 ```dart
-var list = AddressProvider.all(provinceId: 1);
+var list = await AddressProvider.all(provinceId: 1);
 ```
 
 ค้นหาโดยใช้คำค้น (keyword)
 
 ```dart
-var list = AddressProvider.search(keyword: "นา");
+var list = await AddressProvider.search(keyword: "นา");
 ```
 
 ค้นหาโดยใช้คำค้น (keyword) เฉพาะในจังหวัด
 
 ```dart
-var list = AddressProvider.searchInProvince(provinceId: 1, keyword: "101");
+var list = await AddressProvider.searchInProvince(provinceId: 1, keyword: "101");
 ```
+
+## การใช้ Dialog เลือกจังหวัด
+หากต้องการเลือกจังหวัดแบบรวดเร็ว สามารถเรียกใช้ ChooseProvinceDialog 
+```dart
+var list = await ProvinceProvider.all();
+ProvinceDao province = await ChooseProvinceDialog.show(context, listProvinces: list);
+```
+
+การ custom style ของ ChooseProvinceDialog สามารถกำหนดสีและ font-family ได้
+
+![Screenshot](screenshots/a1.gif)
+
+```dart
+var list = await ProvinceProvider.all();
+ProvinceDao province = await ChooseProvinceDialog.show(context,
+                    listProvinces: list,
+                    colorBackgroundHeader: Colors.purple[300],
+                    colorLineHeader: Colors.purple[500],
+                    styleTitle: TextStyle(fontSize: 18, fontFamily: "Kanit-Regular"),
+                    styleSubTitle: TextStyle(fontSize: 14, fontFamily: "Kanit-Regular", 
+                                       color: Colors.grey[400]),
+                    styleTextNoData: TextStyle(fontFamily: "Kanit-Regular"),
+                    styleTextSearchHint: TextStyle(fontFamily: "Kanit-Regular"),
+                    styleTextSearch: TextStyle(fontFamily: "Kanit-Regular"));
+                  
+```
+
