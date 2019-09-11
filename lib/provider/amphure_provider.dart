@@ -29,6 +29,15 @@ class AmphureProvider {
     return listAmphures;
   }
 
+  static Future<List<AmphureDao>> search({String keyword = ""}) async {
+    List<Map<String, dynamic>> mapResult = await ThailandProvincesDatabase.db
+        .query(TABLE_AMPHURES, where: "( name_th LIKE ? OR name_en LIKE ? )", whereArgs: ["%$keyword%", "%$keyword%"]);
+
+    List<AmphureDao> listAmphures = mapAmphuresList(mapResult);
+
+    return listAmphures;
+  }
+
   static List<AmphureDao> mapAmphuresList(List<Map<String, dynamic>> mapResult) {
     List<AmphureDao> listAmphures = List();
     for (Map mapRow in mapResult) {

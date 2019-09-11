@@ -9,7 +9,6 @@ import 'package:flutter_thailand_provinces/provider/address_provider.dart';
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await ThailandProvincesDatabase.init();
-  await AddressProvider.search(keyword: "Mae");
   runApp(MyApp());
 }
 

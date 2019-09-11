@@ -1,7 +1,5 @@
 import 'dart:async';
 import 'dart:io';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_thailand_provinces/my_utils.dart';
 import 'package:sqflite/sqflite.dart';

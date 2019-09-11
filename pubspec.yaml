@@ -1,8 +1,8 @@
 name: flutter_thailand_provinces
-description: A new Flutter plugin.
-version: 0.0.1
-author:
-homepage:
+description: Simple Thailand province database for flutter.
+version: 1.0.0
+author: benznest <benz7net@gmail.com>
+homepage: https://github.com/benznest/flutter_thailand_provinces
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
