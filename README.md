@@ -171,6 +171,10 @@ var list = await AddressProvider.search(keyword: "นา");
 var list = await AddressProvider.searchInProvince(provinceId: 1, keyword: "101");
 ```
 
+ตัวอย่างการใช้งาน
+
+![Screenshot](screenshots/a4.gif)
+
 ## การใช้ Dialog เลือกจังหวัด
 หากต้องการเลือกจังหวัดแบบรวดเร็ว สามารถเรียกใช้ ChooseProvinceDialog 
 ```dart

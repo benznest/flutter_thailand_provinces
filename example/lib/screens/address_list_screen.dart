@@ -28,7 +28,7 @@ class _AddressListScreenState extends State<AddressListScreen> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Colors.green[300],
+        backgroundColor: Colors.teal[300],
         elevation: 0,
         title: Text("ที่อยู่"),
       ),
@@ -169,7 +169,7 @@ class _AddressListScreenState extends State<AddressListScreen> {
 
   Widget buildSearchContainer() {
     return Container(
-      decoration: BoxDecoration(color: Colors.green[300], border: Border(bottom: BorderSide(color: Colors.green[400], width: 4))),
+      decoration: BoxDecoration(color: Colors.teal[300], border: Border(bottom: BorderSide(color: Colors.teal[400], width: 4))),
       padding: EdgeInsets.only(left: 16, right: 16, bottom: 8),
       child: Container(
           padding: EdgeInsets.all(8),
