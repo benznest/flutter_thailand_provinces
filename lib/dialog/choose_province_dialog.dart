@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_thailand_provinces/provider/province_provider.dart';
 import 'package:flutter_thailand_provinces/dao/province_dao.dart';
 
 class ChooseProvinceDialog extends StatefulWidget {
@@ -78,7 +77,7 @@ class _ChooseProvinceDialogState extends State<ChooseProvinceDialog> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
+      onTap: () {
         Navigator.pop(context);
       },
       child: Container(
@@ -100,7 +99,10 @@ class _ChooseProvinceDialogState extends State<ChooseProvinceDialog> {
                   ),
                   Expanded(
                     child: Container(
-                      decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.vertical(bottom: Radius.circular(widget.borderRadius))),
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.vertical(
+                              bottom: Radius.circular(widget.borderRadius))),
                       padding: EdgeInsets.all(8),
                       child: buildListView(),
                     ),
@@ -157,7 +159,8 @@ class _ChooseProvinceDialogState extends State<ChooseProvinceDialog> {
                   ),
                   Text(
                     province.nameEn,
-                    style: widget.styleSubTitle ?? TextStyle(fontSize: 14, color: Colors.grey),
+                    style: widget.styleSubTitle ??
+                        TextStyle(fontSize: 14, color: Colors.grey),
                   ),
                 ],
               ),
@@ -174,20 +177,29 @@ class _ChooseProvinceDialogState extends State<ChooseProvinceDialog> {
   Widget buildSearchContainer() {
     return Container(
       padding: EdgeInsets.only(left: 16, right: 16, top: 16, bottom: 8),
-      decoration: BoxDecoration(color: widget.colorBackgroundHeader ?? Colors.blue, borderRadius: BorderRadius.vertical(top: Radius.circular(widget.borderRadius))),
+      decoration: BoxDecoration(
+          color: widget.colorBackgroundHeader ?? Colors.blue,
+          borderRadius:
+              BorderRadius.vertical(top: Radius.circular(widget.borderRadius))),
       child: Column(
         children: <Widget>[
           Container(
               padding: EdgeInsets.all(12),
-              decoration: BoxDecoration(color: widget.colorBackgroundSearch ?? Colors.white.withOpacity(0.7), borderRadius: BorderRadius.circular(8)),
+              decoration: BoxDecoration(
+                  color: widget.colorBackgroundSearch ??
+                      Colors.white.withOpacity(0.7),
+                  borderRadius: BorderRadius.circular(8)),
               child: TextField(
                 controller: _searchProvinceController,
                 style: widget.styleTextSearch,
-                decoration: InputDecoration.collapsed(hintText: "จังหวัด..", hintStyle: widget.styleTextSearchHint),
+                decoration: InputDecoration.collapsed(
+                    hintText: "จังหวัด..",
+                    hintStyle: widget.styleTextSearchHint),
                 onChanged: (text) async {
                   List list = widget.listProvinces.where((item) {
                     text = text.toLowerCase();
-                    return item.nameTh.toLowerCase().contains(text) || item.nameEn.toLowerCase().contains(text);
+                    return item.nameTh.toLowerCase().contains(text) ||
+                        item.nameEn.toLowerCase().contains(text);
                   }).toList();
 
                   setState(() {

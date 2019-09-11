@@ -16,6 +16,4 @@ class AddressDao {
       "district": this.district.toJson(),
     };
   }
-
-
 }

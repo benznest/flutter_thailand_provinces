@@ -92,21 +92,29 @@ class _AddressListScreenState extends State<AddressListScreen> {
                     children: <Widget>[
                       Text(
                         address.district.nameTh,
-                        style: TextStyle(fontSize: 18,color: getColorHighlight(address.district.nameTh)),
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: getColorHighlight(address.district.nameTh)),
                       ),
                       SizedBox(
                         width: 6,
                       ),
                       Text(
                         ", " + address.amphure.nameTh,
-                        style: TextStyle(fontSize: 18,color: getColorHighlight(address.amphure.nameTh)),
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: getColorHighlight(address.amphure.nameTh)),
                       ),
                       SizedBox(
                         width: 6,
                       ),
                       Text(
-                        address.district.zipCode == "0" ? "" : address.district.zipCode,
-                        style: TextStyle(fontSize: 18,color: getColorHighlight(address.district.zipCode)),
+                        address.district.zipCode == "0"
+                            ? ""
+                            : address.district.zipCode,
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: getColorHighlight(address.district.zipCode)),
                       ),
                     ],
                   ),
@@ -114,7 +122,9 @@ class _AddressListScreenState extends State<AddressListScreen> {
                     children: <Widget>[
                       Text(
                         address.province.nameTh,
-                        style: TextStyle(fontSize: 14,color: getColorHighlight(address.province.nameTh)),
+                        style: TextStyle(
+                            fontSize: 14,
+                            color: getColorHighlight(address.province.nameTh)),
                       ),
                     ],
                   ),
@@ -125,14 +135,18 @@ class _AddressListScreenState extends State<AddressListScreen> {
                     children: <Widget>[
                       Text(
                         address.district.nameEn,
-                        style: TextStyle(fontSize: 14 ,color: getColorHighlight(address.district.nameEn)),
+                        style: TextStyle(
+                            fontSize: 14,
+                            color: getColorHighlight(address.district.nameEn)),
                       ),
                       SizedBox(
                         width: 6,
                       ),
                       Text(
                         ", " + address.amphure.nameEn,
-                        style: TextStyle(fontSize: 14 ,color: getColorHighlight(address.amphure.nameEn)),
+                        style: TextStyle(
+                            fontSize: 14,
+                            color: getColorHighlight(address.amphure.nameEn)),
                       ),
                     ],
                   ),
@@ -140,7 +154,9 @@ class _AddressListScreenState extends State<AddressListScreen> {
                     children: <Widget>[
                       Text(
                         address.province.nameEn,
-                        style: TextStyle(fontSize: 14, color: getColorHighlight(address.province.nameEn)),
+                        style: TextStyle(
+                            fontSize: 14,
+                            color: getColorHighlight(address.province.nameEn)),
                       ),
                     ],
                   ),
@@ -157,9 +173,9 @@ class _AddressListScreenState extends State<AddressListScreen> {
   }
 
   Color getColorHighlight(String text) {
-    if(keyword.isEmpty){
+    if (keyword.isEmpty) {
       return Colors.grey[700];
-    }else {
+    } else {
       if (text.toLowerCase().contains(keyword.toLowerCase())) {
         return Colors.red[400];
       }
@@ -169,14 +185,19 @@ class _AddressListScreenState extends State<AddressListScreen> {
 
   Widget buildSearchContainer() {
     return Container(
-      decoration: BoxDecoration(color: Colors.teal[300], border: Border(bottom: BorderSide(color: Colors.teal[400], width: 4))),
+      decoration: BoxDecoration(
+          color: Colors.teal[300],
+          border:
+              Border(bottom: BorderSide(color: Colors.teal[400], width: 4))),
       padding: EdgeInsets.only(left: 16, right: 16, bottom: 8),
       child: Container(
           padding: EdgeInsets.all(8),
-          decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(8)),
+          decoration: BoxDecoration(
+              color: Colors.white, borderRadius: BorderRadius.circular(8)),
           child: TextField(
             controller: _searchAddressController,
-            decoration: InputDecoration.collapsed(hintText: "ที่อยู่ ตำบล/อำเภอ/เลขไปรษณีย์"),
+            decoration: InputDecoration.collapsed(
+                hintText: "ที่อยู่ ตำบล/อำเภอ/เลขไปรษณีย์"),
             onChanged: (text) async {
               setState(() {
                 keyword = text;

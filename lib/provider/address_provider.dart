@@ -3,7 +3,6 @@ import 'package:flutter_thailand_provinces/dao/province_dao.dart';
 import 'package:flutter_thailand_provinces/dao/amphure_dao.dart';
 import 'package:flutter_thailand_provinces/dao/district_dao.dart';
 import 'package:flutter_thailand_provinces/flutter_thailand_provinces.dart';
-import 'package:flutter_thailand_provinces/my_utils.dart';
 import 'package:flutter_thailand_provinces/provider/province_provider.dart';
 import 'package:flutter_thailand_provinces/provider/amphure_provider.dart';
 import 'package:flutter_thailand_provinces/provider/district_provider.dart';
@@ -35,7 +34,8 @@ class AddressProvider {
     if (provinceId > 0) {
       sql = sql + " WHERE  P.id = ? ";
     }
-    List<Map<String, dynamic>> mapResult = await ThailandProvincesDatabase.db.rawQuery(sql, ["$provinceId"]);
+    List<Map<String, dynamic>> mapResult =
+        await ThailandProvincesDatabase.db.rawQuery(sql, ["$provinceId"]);
 
     List<AddressDao> listAddress = mapAddressList(mapResult);
     return listAddress;
@@ -49,7 +49,8 @@ class AddressProvider {
             " D.name_en LIKE ? OR D.name_th LIKE ? OR "
             " D.zip_code LIKE ? "
             " ";
-    List<Map<String, dynamic>> mapResult = await ThailandProvincesDatabase.db.rawQuery(sql, [
+    List<Map<String, dynamic>> mapResult =
+        await ThailandProvincesDatabase.db.rawQuery(sql, [
       "%$keyword%",
       "%$keyword%",
       "%$keyword%",
@@ -63,7 +64,8 @@ class AddressProvider {
     return listAddress;
   }
 
-  static Future<List<AddressDao>> searchInProvince({int provinceId = 1, String keyword = ""}) async {
+  static Future<List<AddressDao>> searchInProvince(
+      {int provinceId = 1, String keyword = ""}) async {
     String sql = _BASE_SQL +
         " WHERE  "
             " P.id = ? AND ( "
@@ -72,9 +74,10 @@ class AddressProvider {
             " D.name_en LIKE ? OR D.name_th LIKE ? OR "
             " D.zip_code LIKE ? "
             " ) ";
-    List<Map<String, dynamic>> mapResult = await ThailandProvincesDatabase.db.rawQuery(sql, [
+    List<Map<String, dynamic>> mapResult =
+        await ThailandProvincesDatabase.db.rawQuery(sql, [
       "$provinceId"
-      "%$keyword%",
+          "%$keyword%",
       "%$keyword%",
       "%$keyword%",
       "%$keyword%",
@@ -92,11 +95,24 @@ class AddressProvider {
     if (mapResult.isNotEmpty) {
       for (Map map in mapResult) {
         AddressDao address = AddressDao(
-            province:
-                ProvinceDao(id: int.parse(map["p_id"]), code: map["p_code"], nameTh: map["p_name_th"], nameEn: map["p_name_en"], geographyId: int.parse(map["p_geography_id"])),
-            amphure: AmphureDao(id: int.parse(map["a_id"]), code: map["a_code"], nameTh: map["a_name_th"], nameEn: map["a_name_en"], provinceId: int.parse(map["a_province_id"])),
-            district:
-                DistrictDao(id: int.parse(map["d_id"]), nameTh: map["d_name_th"], nameEn: map["d_name_en"], zipCode: map["d_zip_code"], amphureId: int.parse(map["d_amphure_id"])));
+            province: ProvinceDao(
+                id: int.parse(map["p_id"]),
+                code: map["p_code"],
+                nameTh: map["p_name_th"],
+                nameEn: map["p_name_en"],
+                geographyId: int.parse(map["p_geography_id"])),
+            amphure: AmphureDao(
+                id: int.parse(map["a_id"]),
+                code: map["a_code"],
+                nameTh: map["a_name_th"],
+                nameEn: map["a_name_en"],
+                provinceId: int.parse(map["a_province_id"])),
+            district: DistrictDao(
+                id: int.parse(map["d_id"]),
+                nameTh: map["d_name_th"],
+                nameEn: map["d_name_en"],
+                zipCode: map["d_zip_code"],
+                amphureId: int.parse(map["d_amphure_id"])));
         listAddress.add(address);
       }
     }

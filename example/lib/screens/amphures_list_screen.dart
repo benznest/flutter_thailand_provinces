@@ -124,16 +124,21 @@ class _AmphuresListScreenState extends State<AmphuresListScreen> {
 
   Widget buildSearchContainer() {
     return Container(
-      decoration: BoxDecoration(color: Colors.green[300], border: Border(bottom: BorderSide(color: Colors.green[400], width: 4))),
+      decoration: BoxDecoration(
+          color: Colors.green[300],
+          border:
+              Border(bottom: BorderSide(color: Colors.green[400], width: 4))),
       padding: EdgeInsets.only(left: 16, right: 16, bottom: 8),
       child: Container(
           padding: EdgeInsets.all(8),
-          decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(8)),
+          decoration: BoxDecoration(
+              color: Colors.white, borderRadius: BorderRadius.circular(8)),
           child: TextField(
             controller: _searchAmphureController,
             decoration: InputDecoration.collapsed(hintText: "อำเภอ.."),
             onChanged: (text) async {
-              List list = await AmphureProvider.searchInProvince(provinceId: widget.province.id, keyword: text);
+              List list = await AmphureProvider.searchInProvince(
+                  provinceId: widget.province.id, keyword: text);
               print("${list.length}");
               setState(() {
                 listAmphureFilter = list;

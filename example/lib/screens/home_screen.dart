@@ -35,12 +35,22 @@ class _HomeScreenState extends State<HomeScreen> {
             children: <Widget>[
               GestureDetector(
                 onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => ProvincesListScreen()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ProvincesListScreen()));
                 },
                 child: Container(
                   padding: EdgeInsets.all(16),
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(16), color: Colors.white, boxShadow: [BoxShadow(color: Colors.grey[300], blurRadius: 80, offset: Offset(0, 10))]),
+                      borderRadius: BorderRadius.circular(16),
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.grey[300],
+                            blurRadius: 80,
+                            offset: Offset(0, 10))
+                      ]),
                   child: Row(
                     children: <Widget>[
                       Expanded(
@@ -62,12 +72,22 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               GestureDetector(
                 onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => AddressListScreen()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => AddressListScreen()));
                 },
                 child: Container(
                   padding: EdgeInsets.all(16),
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(16), color: Colors.white, boxShadow: [BoxShadow(color: Colors.grey[300], blurRadius: 80, offset: Offset(0, 10))]),
+                      borderRadius: BorderRadius.circular(16),
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.grey[300],
+                            blurRadius: 80,
+                            offset: Offset(0, 10))
+                      ]),
                   child: Row(
                     children: <Widget>[
                       Expanded(
@@ -96,8 +116,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     listProvinces: list,
                     colorBackgroundHeader: Colors.purple[300],
                     colorLineHeader: Colors.purple[500],
-                    styleTitle: TextStyle(fontSize: 18, fontFamily: "Kanit-Regular"),
-                    styleSubTitle: TextStyle(fontSize: 14, fontFamily: "Kanit-Regular", color: Colors.grey[400]),
+                    styleTitle:
+                        TextStyle(fontSize: 18, fontFamily: "Kanit-Regular"),
+                    styleSubTitle: TextStyle(
+                        fontSize: 14,
+                        fontFamily: "Kanit-Regular",
+                        color: Colors.grey[400]),
                     styleTextNoData: TextStyle(fontFamily: "Kanit-Regular"),
                     styleTextSearchHint: TextStyle(fontFamily: "Kanit-Regular"),
                     styleTextSearch: TextStyle(fontFamily: "Kanit-Regular"),
@@ -109,7 +133,14 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Container(
                   padding: EdgeInsets.all(16),
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(16), color: Colors.white, boxShadow: [BoxShadow(color: Colors.grey[300], blurRadius: 80, offset: Offset(0, 10))]),
+                      borderRadius: BorderRadius.circular(16),
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.grey[300],
+                            blurRadius: 80,
+                            offset: Offset(0, 10))
+                      ]),
                   child: Row(
                     children: <Widget>[
                       Expanded(
@@ -117,15 +148,20 @@ class _HomeScreenState extends State<HomeScreen> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             Text(
-                              provinceSelected == null ? "เลือกจังหวัด" : provinceSelected.nameTh,
+                              provinceSelected == null
+                                  ? "เลือกจังหวัด"
+                                  : provinceSelected.nameTh,
                               style: TextStyle(fontSize: 20),
                             ),
                             SizedBox(
                               height: 4,
                             ),
                             Text(
-                              provinceSelected == null ? "" : provinceSelected.nameEn,
-                              style: TextStyle(fontSize: 14, color: Colors.grey),
+                              provinceSelected == null
+                                  ? ""
+                                  : provinceSelected.nameEn,
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.grey),
                             ),
                           ],
                         ),

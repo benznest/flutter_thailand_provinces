@@ -121,11 +121,15 @@ class _ProvincesListScreenState extends State<ProvincesListScreen> {
 
   Widget buildSearchContainer() {
     return Container(
-      decoration: BoxDecoration(color: Colors.blue, border: Border(bottom: BorderSide(color: Colors.blue[600], width: 4))),
+      decoration: BoxDecoration(
+          color: Colors.blue,
+          border:
+              Border(bottom: BorderSide(color: Colors.blue[600], width: 4))),
       padding: EdgeInsets.only(left: 16, right: 16, bottom: 8),
       child: Container(
           padding: EdgeInsets.all(8),
-          decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(8)),
+          decoration: BoxDecoration(
+              color: Colors.white, borderRadius: BorderRadius.circular(8)),
           child: TextField(
             controller: _searchProvinceController,
             decoration: InputDecoration.collapsed(hintText: "จังหวัด.."),

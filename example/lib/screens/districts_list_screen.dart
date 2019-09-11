@@ -111,16 +111,20 @@ class _DistrictsListScreenState extends State<DistrictsListScreen> {
 
   Widget buildSearchContainer() {
     return Container(
-      decoration: BoxDecoration(color: Colors.red[300], border: Border(bottom: BorderSide(color: Colors.red[400], width: 4))),
+      decoration: BoxDecoration(
+          color: Colors.red[300],
+          border: Border(bottom: BorderSide(color: Colors.red[400], width: 4))),
       padding: EdgeInsets.only(left: 16, right: 16, bottom: 8),
       child: Container(
           padding: EdgeInsets.all(8),
-          decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(8)),
+          decoration: BoxDecoration(
+              color: Colors.white, borderRadius: BorderRadius.circular(8)),
           child: TextField(
             controller: _searchDistrictController,
             decoration: InputDecoration.collapsed(hintText: "ตำบล.."),
             onChanged: (text) async {
-              List list = await DistrictProvider.searchInAmphure(amphureId: widget.amphure.id, keyword: text);
+              List list = await DistrictProvider.searchInAmphure(
+                  amphureId: widget.amphure.id, keyword: text);
               print("${list.length}");
               setState(() {
                 listDistrictsFilter = list;
