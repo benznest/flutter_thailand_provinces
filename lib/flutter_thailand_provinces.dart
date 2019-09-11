@@ -1,16 +1,15 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:flutter/services.dart';
-import 'package:flutter_thailand_provinces/my_utils.dart';
 import 'package:sqflite/sqflite.dart';
-import 'package:path/path.dart';
+import 'package:path/path.dart' as p;
 
 class ThailandProvincesDatabase {
   static Database db;
 
   static Future<Database> init() async {
     var databasesPath = await getDatabasesPath();
-    var path = join(databasesPath, "thailand.db");
+    var path = p.join(databasesPath, "thailand.db");
 
     // Check if the database exists
     var exists = await databaseExists(path);
@@ -21,7 +20,7 @@ class ThailandProvincesDatabase {
 
       // Make sure the parent directory exists
       try {
-        await Directory(dirname(path)).create(recursive: true);
+        await Directory(p.dirname(path)).create(recursive: true);
       } catch (_) {}
 
       // Copy from asset

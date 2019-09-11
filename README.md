@@ -138,7 +138,7 @@ var list = await DistrictProvider.searchInAmphure(amphureId: 1001, keyword: "แ
 
 ## ข้อมูลที่อยู่ (Address)
 
-Address คือ การนำข้อมูล จังหวัด อำเภอ และตำบลมา join กัน โดยการ query ข้อมูลจะทำผ่าน AddressProvider จากนั้นคุณจะได้ List<AddressDao> ซึ่งใน AddressDao จะมีข้อมูล 3 ส่วนคือ ProvinceDao, AmphureDao, DistrictDao นั่นเอง
+Address คือ การนำข้อมูล จังหวัด อำเภอ และตำบล มา join กัน โดยวิธีการใช้งานคือ ใช้งานผ่าน AddressProvider จากนั้นคุณจะได้ List<AddressDao> ซึ่งใน AddressDao จะมีข้อมูล 3 ส่วนคือ ProvinceDao, AmphureDao, DistrictDao นั่นเอง
 
 การ query ข้อมูล address ทั้งหมด
 
@@ -178,6 +178,9 @@ var list = await AddressProvider.searchInProvince(provinceId: 1, keyword: "101")
 ## การใช้ Dialog เลือกจังหวัด
 หากต้องการเลือกจังหวัดแบบรวดเร็ว สามารถเรียกใช้ ChooseProvinceDialog 
 ```dart
+//import 'package:flutter_thailand_provinces/provider/province_provider.dart';
+//import 'package:flutter_thailand_provinces/dialog/choose_province_dialog.dart';
+
 var list = await ProvinceProvider.all();
 ProvinceDao province = await ChooseProvinceDialog.show(context, listProvinces: list);
 ```
@@ -186,7 +189,13 @@ ProvinceDao province = await ChooseProvinceDialog.show(context, listProvinces: l
 
 ![Screenshot](screenshots/a1.gif)
 
+ตัวอย่างการใช้งาน
+
 ```dart
+//import 'package:flutter_thailand_provinces/provider/province_provider.dart';
+//import 'package:flutter_thailand_provinces/dialog/choose_province_dialog.dart';
+//import 'package:flutter_thailand_provinces/dao/province_dao.dart';
+
 var list = await ProvinceProvider.all();
 ProvinceDao province = await ChooseProvinceDialog.show(context,
                     listProvinces: list,
