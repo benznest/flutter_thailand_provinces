@@ -1,9 +1,10 @@
 # Flutter Thailand Provinces
 
 ฐานข้อมูลจังหวัด อำเภอ ตำบล หมายเลขไปรษณีย์ของประเทศไทย สำหรับใช้งานใน Flutter
-เลือกจังหวักดผ่าน dialog อย่างง่ายๆ 
+เลือกจังหวัดผ่าน dialog อย่างง่าย 
 
 ฐานข้อมูล .sql จากคุณ parsilver แล้วแปลงเป็น .db สำหรับ SQLite เพื่อใช้งานใน Flutter
+
 [https://github.com/parsilver/thailand-provinces](https://github.com/parsilver/thailand-provinces)
 
 ## การติดตั้ง
@@ -12,8 +13,11 @@
 
 ```bash
 dependencies:
-    flutter_thailand_provinces: 1.0.0
+    flutter_thailand_provinces: 1.0.1
 ```
+
+รายละเอียดได้ที่ pub.dev
+[https://pub.dev/packages/flutter_thailand_provinces/](https://pub.dev/packages/flutter_thailand_provinces/)
 
 ## การใช้งาน
 

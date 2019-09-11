@@ -14,21 +14,34 @@ class ChooseProvinceDialog extends StatefulWidget {
   final Color colorBackgroundHeader;
   final Color colorLine;
   final Color colorLineHeader;
+  final Color colorBackgroundDialog;
 
   ChooseProvinceDialog(
-      {this.listProvinces, this.styleTitle, this.styleSubTitle, this.styleTextNoData, this.styleTextSearch, this.styleTextSearchHint, this.colorBackgroundHeader,this.colorBackgroundSearch, this.colorLine, this.colorLineHeader,this.borderRadius = 16});
+      {this.listProvinces,
+      this.styleTitle,
+      this.styleSubTitle,
+      this.styleTextNoData,
+      this.styleTextSearch,
+      this.styleTextSearchHint,
+      this.colorBackgroundHeader,
+      this.colorBackgroundSearch,
+      this.colorBackgroundDialog,
+      this.colorLine,
+      this.colorLineHeader,
+      this.borderRadius = 16});
 
   static show(BuildContext context,
       {@required List<ProvinceDao> listProvinces,
-        TextStyle styleTitle,
-        TextStyle styleSubTitle,
-        TextStyle styleTextNoData,
-        TextStyle styleTextSearch,
-        TextStyle styleTextSearchHint,
-        Color colorBackgroundSearch,
-        Color colorBackgroundHeader,
-        Color colorLine,
-        Color colorLineHeader,
+      TextStyle styleTitle,
+      TextStyle styleSubTitle,
+      TextStyle styleTextNoData,
+      TextStyle styleTextSearch,
+      TextStyle styleTextSearchHint,
+      Color colorBackgroundSearch,
+      Color colorBackgroundHeader,
+      Color colorBackgroundDialog,
+      Color colorLine,
+      Color colorLineHeader,
       double borderRadius = 16}) {
     return showDialog(
         context: context,
@@ -41,9 +54,10 @@ class ChooseProvinceDialog extends StatefulWidget {
               styleTextSearch: styleTextSearch,
               colorBackgroundSearch: colorBackgroundSearch,
               colorBackgroundHeader: colorBackgroundHeader,
+              colorBackgroundDialog: colorBackgroundDialog,
               colorLine: colorLine,
               colorLineHeader: colorLineHeader,
-              borderRadius:borderRadius);
+              borderRadius: borderRadius);
         });
   }
 
@@ -63,30 +77,36 @@ class _ChooseProvinceDialogState extends State<ChooseProvinceDialog> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Center(
-        child: Material(
-          color: Colors.transparent,
-          child: Container(
+    return GestureDetector(
+      onTap: (){
+        Navigator.pop(context);
+      },
+      child: Container(
+        color: widget.colorBackgroundDialog ?? Colors.black45.withOpacity(0.2),
+        child: Center(
+          child: Material(
+            color: Colors.transparent,
+            child: Container(
 //          decoration: BoxDecoration(borderRadius: BorderRadius.circular(16)),
-            width: 300,
-            height: 420,
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-                buildSearchContainer(),
-                Container(
-                  color: widget.colorLineHeader ?? Colors.blue[600],
-                  height: 4,
-                ),
-                Expanded(
-                  child: Container(
-                    decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.vertical(bottom: Radius.circular(widget.borderRadius))),
-                    padding: EdgeInsets.all(8),
-                    child: buildListView(),
+              width: 300,
+              height: 420,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  buildSearchContainer(),
+                  Container(
+                    color: widget.colorLineHeader ?? Colors.blue[600],
+                    height: 4,
                   ),
-                ),
-              ],
+                  Expanded(
+                    child: Container(
+                      decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.vertical(bottom: Radius.circular(widget.borderRadius))),
+                      padding: EdgeInsets.all(8),
+                      child: buildListView(),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
@@ -163,7 +183,7 @@ class _ChooseProvinceDialogState extends State<ChooseProvinceDialog> {
               child: TextField(
                 controller: _searchProvinceController,
                 style: widget.styleTextSearch,
-                decoration: InputDecoration.collapsed(hintText: "จังหวัด..",hintStyle: widget.styleTextSearchHint),
+                decoration: InputDecoration.collapsed(hintText: "จังหวัด..", hintStyle: widget.styleTextSearchHint),
                 onChanged: (text) async {
                   List list = widget.listProvinces.where((item) {
                     text = text.toLowerCase();

@@ -90,6 +90,7 @@ class _HomeScreenState extends State<HomeScreen> {
               GestureDetector(
                 onTap: () async {
                   List list = await ProvinceProvider.all();
+
                   ProvinceDao province = await ChooseProvinceDialog.show(
                     context,
                     listProvinces: list,
