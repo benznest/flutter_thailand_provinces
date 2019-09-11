@@ -53,6 +53,9 @@ for(ProvinceDao province in list){
 var list = await ProvinceProvider.search(keyword: "เชียงใหม่");
 ```
 
+ตัวอย่างการใช้งาน
+![Screenshot](screenshots/a2.gif)
+
 ## ข้อมูลอำเภอ (Amphure)
 
 การ query ข้อมูลอำเภอทำผ่าน AmphureProvider จากนั้นคุณจะได้ List<AmphureDao> ที่มีข้อมูลอำเภอ
@@ -90,6 +93,9 @@ var list = await AmphureProvider.search(keyword: "บาง");
 var list = await AmphureProvider.searchInProvince(provinceId: 1, keyword: "บาง");
 ```
 
+ตัวอย่างการใช้งาน
+![Screenshot](screenshots/a3.gif)
+
 ## ข้อมูลตำบล (District)
 
 การ query ข้อมูลตำบลทำผ่าน DistrictProvider จากนั้นคุณจะได้ List<DistrictDao> ที่มีข้อมูลตำบล
@@ -122,6 +128,10 @@ var list = await DistrictProvider.all(amphureId: 1001);
 ```dart
 var list = await DistrictProvider.searchInAmphure(amphureId: 1001, keyword: "แม่เมาะ");
 ```
+
+
+ตัวอย่างการใช้งาน
+![Screenshot](screenshots/1.png)
 
 ## ข้อมูลที่อยู่ (Address)
 

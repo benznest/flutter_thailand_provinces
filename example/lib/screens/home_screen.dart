@@ -33,60 +33,60 @@ class _HomeScreenState extends State<HomeScreen> {
           child: ListView(
             padding: EdgeInsets.all(16),
             children: <Widget>[
-//              GestureDetector(
-//                onTap: () {
-//                  Navigator.push(context, MaterialPageRoute(builder: (context) => ProvincesListScreen()));
-//                },
-//                child: Container(
-//                  padding: EdgeInsets.all(16),
-//                  decoration: BoxDecoration(
-//                      borderRadius: BorderRadius.circular(16), color: Colors.white, boxShadow: [BoxShadow(color: Colors.grey[300], blurRadius: 80, offset: Offset(0, 10))]),
-//                  child: Row(
-//                    children: <Widget>[
-//                      Expanded(
-//                        child: Text(
-//                          "จังหวัด > อำเภอ > ตำบล",
-//                          style: TextStyle(fontSize: 20),
-//                        ),
-//                      ),
-//                      Icon(
-//                        Icons.arrow_forward_ios,
-//                        color: Colors.grey[600],
-//                      )
-//                    ],
-//                  ),
-//                ),
-//              ),
-//              SizedBox(
-//                height: 8,
-//              ),
-//              GestureDetector(
-//                onTap: () {
-//                  Navigator.push(context, MaterialPageRoute(builder: (context) => AddressListScreen()));
-//                },
-//                child: Container(
-//                  padding: EdgeInsets.all(16),
-//                  decoration: BoxDecoration(
-//                      borderRadius: BorderRadius.circular(16), color: Colors.white, boxShadow: [BoxShadow(color: Colors.grey[300], blurRadius: 80, offset: Offset(0, 10))]),
-//                  child: Row(
-//                    children: <Widget>[
-//                      Expanded(
-//                        child: Text(
-//                          "ค้นหาที่อยู่",
-//                          style: TextStyle(fontSize: 20),
-//                        ),
-//                      ),
-//                      Icon(
-//                        Icons.arrow_forward_ios,
-//                        color: Colors.grey[600],
-//                      )
-//                    ],
-//                  ),
-//                ),
-//              ),
-//              SizedBox(
-//                height: 8,
-//              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => ProvincesListScreen()));
+                },
+                child: Container(
+                  padding: EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16), color: Colors.white, boxShadow: [BoxShadow(color: Colors.grey[300], blurRadius: 80, offset: Offset(0, 10))]),
+                  child: Row(
+                    children: <Widget>[
+                      Expanded(
+                        child: Text(
+                          "จังหวัด > อำเภอ > ตำบล",
+                          style: TextStyle(fontSize: 20),
+                        ),
+                      ),
+                      Icon(
+                        Icons.arrow_forward_ios,
+                        color: Colors.grey[600],
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 8,
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => AddressListScreen()));
+                },
+                child: Container(
+                  padding: EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16), color: Colors.white, boxShadow: [BoxShadow(color: Colors.grey[300], blurRadius: 80, offset: Offset(0, 10))]),
+                  child: Row(
+                    children: <Widget>[
+                      Expanded(
+                        child: Text(
+                          "ค้นหาที่อยู่",
+                          style: TextStyle(fontSize: 20),
+                        ),
+                      ),
+                      Icon(
+                        Icons.arrow_forward_ios,
+                        color: Colors.grey[600],
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 8,
+              ),
               GestureDetector(
                 onTap: () async {
                   List list = await ProvinceProvider.all();

@@ -31,7 +31,7 @@ class _DistrictsListScreenState extends State<DistrictsListScreen> {
           centerTitle: true,
           backgroundColor: Colors.red[300],
           elevation: 0,
-          title: Text("ตำบล"),
+          title: Text(widget.amphure.nameTh),
         ),
         body: Column(children: [
           buildSearchContainer(),

@@ -32,7 +32,7 @@ class _AmphuresListScreenState extends State<AmphuresListScreen> {
         centerTitle: true,
         backgroundColor: Colors.green[300],
         elevation: 0,
-        title: Text("อำเภอ"),
+        title: Text(widget.province.nameTh),
       ),
       body: Column(
         children: <Widget>[
