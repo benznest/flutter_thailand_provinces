@@ -5,8 +5,8 @@ class AmphureProvider {
   static const String TABLE_AMPHURES = "amphures";
 
   static Future<List<AmphureDao>> all({int provinceId = 0}) async {
-    String where;
-    List<dynamic> whereArgs;
+    String? where;
+    List<dynamic>? whereArgs;
     if (provinceId > 0) {
       where = "province_id = ?";
       whereArgs = ["$provinceId"];
@@ -44,9 +44,9 @@ class AmphureProvider {
 
   static List<AmphureDao> mapAmphuresList(
       List<Map<String, dynamic>> mapResult) {
-    List<AmphureDao> listAmphures = List();
+    List<AmphureDao> listAmphures = [];
     for (Map mapRow in mapResult) {
-      listAmphures.add(AmphureDao.fromJson(mapRow));
+      listAmphures.add(AmphureDao.fromJson(mapRow as Map<String, dynamic>));
     }
     return listAmphures;
   }

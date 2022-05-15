@@ -91,7 +91,7 @@ class AddressProvider {
   }
 
   static List<AddressDao> mapAddressList(List<Map<String, dynamic>> mapResult) {
-    List<AddressDao> listAddress = List();
+    List<AddressDao> listAddress = [];
     if (mapResult.isNotEmpty) {
       for (Map map in mapResult) {
         AddressDao address = AddressDao(

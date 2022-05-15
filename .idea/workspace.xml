@@ -1,34 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="38cbcb2d-c2bc-4b9f-b69e-2ba70906fe0b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/benzneststudios/flutter_thailand_provinces/FlutterThailandProvincesPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/benzneststudios/flutter_thailand_provinces/FlutterThailandProvincesPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/java/com/benzneststudios/flutter_thailand_provinces_example/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/main/java/com/benzneststudios/flutter_thailand_provinces_example/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/lib/screens/address_list_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/screens/address_list_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/lib/screens/amphures_list_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/screens/amphures_list_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/lib/screens/districts_list_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/screens/districts_list_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/screens/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/screens/home_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/lib/screens/provinces_list_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/screens/provinces_list_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/test/widget_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/test/widget_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_thailand_provinces.iml" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_thailand_provinces.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/dao/address_dao.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dao/address_dao.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/dao/amphure_dao.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dao/amphure_dao.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/dao/district_dao.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dao/district_dao.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/dao/province_dao.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dao/province_dao.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/dialog/choose_province_dialog.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/dialog/choose_province_dialog.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/flutter_thailand_provinces.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/flutter_thailand_provinces.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/my_utils.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/my_utils.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/provider/address_provider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/provider/address_provider.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/provider/amphure_provider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/provider/amphure_provider.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/provider/district_provider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/provider/district_provider.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/provider/province_provider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/provider/province_provider.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/flutter_thailand_provinces_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/flutter_thailand_provinces_test.dart" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/.dart_tool/" />
-    <ignored path="$PROJECT_DIR$/.idea/" />
-    <ignored path="$PROJECT_DIR$/.pub/" />
-    <ignored path="$PROJECT_DIR$/build/" />
-    <ignored path="$PROJECT_DIR$/example/.pub/" />
-    <ignored path="$PROJECT_DIR$/example/build/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,117 +45,6 @@
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
-  </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_5X_API_28_Ultimate" />
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/flutter_thailand_provinces.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/my_utils.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-              <folding>
-                <element signature="e#0#22#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/provider/amphure_provider.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="76" selection-start-line="1" selection-start-column="76" selection-end-line="1" selection-end-column="76" />
-              <folding>
-                <element signature="e#0#65#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/provider/address_provider.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="41" lean-forward="true" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
-              <folding>
-                <element signature="e#0#65#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/provider/province_provider.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#1#67#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/dialog/choose_province_dialog.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="39" selection-start-column="39" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/example/lib/screens/home_screen.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1049">
-              <caret line="166" column="26" lean-forward="true" selection-start-line="166" selection-start-column="26" selection-end-line="166" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pubspec.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="19" lean-forward="true" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CHANGELOG.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="13" lean-forward="true" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/provider/district_provider.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#1#67#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -162,6 +60,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -202,6 +108,7 @@
     <option name="width" value="1290" />
     <option name="height" value="744" />
   </component>
+  <component name="ProjectId" id="29Cfpyf9rIAznfUwIEGz1hTQ9Oe" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -243,12 +150,21 @@
       <pane id="PackagesPane" />
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="compactDirectories" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="cidr.known.project.marker" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/others" />
-    <property name="settings.editor.selected.configurable" value="flutter.settings" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
@@ -264,18 +180,7 @@
       <recent name="C:\Work\flutter project\flutter_thailand_provinces\example\lib" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -382,21 +287,21 @@
     <entry file="file://$PROJECT_DIR$/example/test/widget_test.dart">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../flutter/packages/flutter/lib/src/widgets/image.dart">
+    <entry file="file://$PROJECT_DIR$/../packages/flutter/lib/src/widgets/image.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1566">
           <caret line="948" column="17" selection-start-line="948" selection-start-column="16" selection-end-line="948" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../flutter/packages/flutter/lib/src/services/binary_messenger.dart">
+    <entry file="file://$PROJECT_DIR$/../packages/flutter/lib/src/services/binary_messenger.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="87" column="34" lean-forward="true" selection-start-line="87" selection-start-column="34" selection-end-line="87" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../flutter/packages/flutter/lib/src/services/asset_bundle.dart">
+    <entry file="file://$PROJECT_DIR$/../packages/flutter/lib/src/services/asset_bundle.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
           <caret line="233" column="75" selection-start-line="233" selection-start-column="75" selection-end-line="233" selection-end-column="75" />

@@ -5,13 +5,22 @@ import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
+import io.flutter.embedding.engine.plugins.FlutterPlugin;
 
 /** FlutterThailandProvincesPlugin */
-public class FlutterThailandProvincesPlugin implements MethodCallHandler {
-  /** Plugin registration. */
-  public static void registerWith(Registrar registrar) {
-    final MethodChannel channel = new MethodChannel(registrar.messenger(), "flutter_thailand_provinces");
+public class FlutterThailandProvincesPlugin implements FlutterPlugin, MethodCallHandler {
+
+  MethodChannel channel;
+
+  @Override
+  public void onAttachedToEngine(FlutterPlugin.FlutterPluginBinding flutterPluginBinding) {
+    final MethodChannel channel = new MethodChannel(flutterPluginBinding.getBinaryMessenger(), "flutter_thailand_provinces");
     channel.setMethodCallHandler(new FlutterThailandProvincesPlugin());
+  }
+
+  @Override
+  public void onDetachedFromEngine(FlutterPlugin.FlutterPluginBinding binding) {
+    channel.setMethodCallHandler(null);
   }
 
   @Override

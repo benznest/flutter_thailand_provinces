@@ -19,8 +19,8 @@ class _DistrictsListScreenState extends State<DistrictsListScreen> {
 
   @override
   void initState() {
-    listDistricts = List();
-    listDistrictsFilter = List();
+    listDistricts = [];
+    listDistrictsFilter = [];
     super.initState();
   }
 

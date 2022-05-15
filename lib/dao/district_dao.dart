@@ -1,12 +1,17 @@
 class DistrictDao {
   int id;
-  String zipCode;
-  String nameTh;
-  String nameEn;
+  String? zipCode;
+  String? nameTh;
+  String? nameEn;
   int amphureId;
 
-  DistrictDao(
-      {this.id, this.zipCode, this.nameTh, this.nameEn, this.amphureId});
+  DistrictDao({
+    required this.id,
+    this.zipCode,
+    this.nameTh,
+    this.nameEn,
+    required this.amphureId,
+  });
 
   factory DistrictDao.fromJson(Map<String, dynamic> json) {
     return DistrictDao(

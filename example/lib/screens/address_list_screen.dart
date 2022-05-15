@@ -19,7 +19,7 @@ class _AddressListScreenState extends State<AddressListScreen> {
 
   @override
   void initState() {
-    listAddresses = List();
+    listAddresses = [];
     super.initState();
   }
 
