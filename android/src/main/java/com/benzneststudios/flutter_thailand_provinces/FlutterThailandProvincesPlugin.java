@@ -20,7 +20,10 @@ public class FlutterThailandProvincesPlugin implements FlutterPlugin, MethodCall
 
   @Override
   public void onDetachedFromEngine(FlutterPlugin.FlutterPluginBinding binding) {
-    channel.setMethodCallHandler(null);
+    if (channel != null) {
+      channel.setMethodCallHandler(null);
+      channel = null;
+    }
   }
 
   @Override
