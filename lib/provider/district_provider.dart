@@ -5,8 +5,8 @@ class DistrictProvider {
   static const String TABLE_DISTRICT = "districts";
 
   static Future<List<DistrictDao>> all({int amphureId = 0}) async {
-    String where;
-    List<dynamic> whereArgs;
+    String? where;
+    List<dynamic>? whereArgs;
     if (amphureId > 0) {
       where = "amphure_id = ?";
       whereArgs = ["$amphureId"];
@@ -22,9 +22,9 @@ class DistrictProvider {
 
   static List<DistrictDao> mapDistrictList(
       List<Map<String, dynamic>> mapResult) {
-    List<DistrictDao> listDistrict = List();
+    List<DistrictDao> listDistrict = [];
     for (Map mapRow in mapResult) {
-      listDistrict.add(DistrictDao.fromJson(mapRow));
+      listDistrict.add(DistrictDao.fromJson(mapRow as Map<String, dynamic>));
     }
     return listDistrict;
   }

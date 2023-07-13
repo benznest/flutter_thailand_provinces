@@ -15,9 +15,9 @@ class ProvinceProvider {
 
   static List<ProvinceDao> mapProvinceList(
       List<Map<String, dynamic>> mapResult) {
-    List<ProvinceDao> listProvinces = List();
+    List<ProvinceDao> listProvinces = [];
     for (Map mapRow in mapResult) {
-      listProvinces.add(ProvinceDao.fromJson(mapRow));
+      listProvinces.add(ProvinceDao.fromJson(mapRow as Map<String, dynamic>));
     }
     return listProvinces;
   }

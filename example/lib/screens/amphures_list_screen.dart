@@ -20,8 +20,8 @@ class _AmphuresListScreenState extends State<AmphuresListScreen> {
 
   @override
   void initState() {
-    listAmphure = List();
-    listAmphureFilter = List();
+    listAmphure = [];
+    listAmphureFilter = [];
     super.initState();
   }
 

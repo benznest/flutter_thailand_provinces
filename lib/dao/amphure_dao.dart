@@ -1,11 +1,17 @@
 class AmphureDao {
   int id;
-  String code;
-  String nameTh;
-  String nameEn;
+  String? code;
+  String? nameTh;
+  String? nameEn;
   int provinceId;
 
-  AmphureDao({this.id, this.code, this.nameTh, this.nameEn, this.provinceId});
+  AmphureDao({
+    required this.id,
+    this.code,
+    this.nameTh,
+    this.nameEn,
+    required this.provinceId,
+  });
 
   factory AmphureDao.fromJson(Map<String, dynamic> json) {
     return AmphureDao(

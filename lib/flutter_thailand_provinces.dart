@@ -5,7 +5,7 @@ import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart' as p;
 
 class ThailandProvincesDatabase {
-  static Database db;
+  static late Database db;
 
   static Future<Database> init() async {
     var databasesPath = await getDatabasesPath();

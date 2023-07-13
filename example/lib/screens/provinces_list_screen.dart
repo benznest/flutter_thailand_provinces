@@ -17,8 +17,8 @@ class _ProvincesListScreenState extends State<ProvincesListScreen> {
 
   @override
   void initState() {
-    listProvinces = List();
-    listProvincesFilter = List();
+    listProvinces = [];
+    listProvincesFilter = [];
     super.initState();
   }
 
